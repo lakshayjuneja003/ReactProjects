@@ -1,16 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import UserContextProvider from "./contexts/UserContextProvider.jsx"
 import './App.css'
+import Login from './components/login.jsx';
+import Profile from './components/profile.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-     <h1 className='text-white'>Hello world</h1>
-    </>
+    <UserContextProvider>
+     <h1 className='text-white'>React With Chai </h1>
+     <Login/>
+     <Profile />
+    </UserContextProvider>
   )
 }
 
-export default App
+export default App;
